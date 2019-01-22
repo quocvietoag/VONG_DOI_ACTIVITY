@@ -15,6 +15,8 @@ public class mainAtivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout1);
 
+
+
         findViewById(R.id.button).setOnClickListener(
               new View.OnClickListener(){
                   @Override
@@ -22,9 +24,23 @@ public class mainAtivity extends Activity {
                   {
                       Intent intent = new Intent(Intent.ACTION_DIAL);
                       startActivity(intent);
+
                   }
               }
         );
+
+        findViewById(R.id.btnXemanh).setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View view)
+                    {
+                        setContentView(R.layout.xemanh);
+
+                    }
+                }
+        );
+
+
 
         Log.d(Tag,"Oncreate");
     }
